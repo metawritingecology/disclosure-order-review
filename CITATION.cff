@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: If you reference this candidate surface, cite it as below.
+title: Disclosure-Order Review with Hashed Blind Envelopes
+authors:
+  - name: Meta-Writing Ecology
+date-released: '2026-08-21'
+repository-code: https://github.com/metawritingecology/disclosure-order-review
+license: CC-BY-SA-4.0
