@@ -22,11 +22,13 @@ author-identity reveal and measured 7.1% of reviews changing (PLOS ONE
 OF BIAS for a specific RESULT, and GRADE rates CERTAINTY in a BODY OF
 EVIDENCE for an outcome, with risk of bias as one input domain — granular
 bias assessment of synthesized evidence is established there, and the two
-instruments do different jobs. What this protocol adds is reviewer-side:
-capture the reviewer's information state as a committed object per stage,
-make disclosure order the instrument, and attach a blindness-assurance
-grade to each finding the reviewer produces — grading the FORMATION
-CONDITIONS of the reviewer's own outputs, an object neither RoB 2 nor
+instruments do different jobs. What this protocol adds over those
+antecedents is reviewer-side COMMITMENT of the information state per
+stage, a deterministic formation-time blindness-control grade per
+finding, and an envelope covering LLM-session channels — disclosure
+ordering and per-stage documentation themselves are inherited from LSU-E
+rather than claimed as novel. The graded object — the FORMATION
+CONDITIONS of the reviewer's own outputs — is one neither RoB 2 nor
 GRADE addresses. Novelty claims in this document are bounded to a
 documented search scope (English-language web, arXiv, methods literature;
 surveyed 2026-08-21, medium depth, recorded queries), not asserted
@@ -63,6 +65,13 @@ absolutely.
    true. Where the runtime cannot attest a channel's closure, the honest
    status is self-reported or UNKNOWN, and the grade reflects that.
 4. **Blindness assurance, graded deterministically, per finding.**
+   The construct, stated precisely: the grade measures BLINDNESS-CONTROL
+   ASSURANCE — the provability of channel closure at the finding's
+   formation moment — and nothing else. It is not a correctness, bias, or
+   reliability score: a VERIFIED finding can be flatly wrong, and an
+   UNVERIFIED finding can be right. Conflating "absence of provable
+   leakage" with "epistemic reliability of the finding" is the misreading
+   this paragraph exists to prevent.
    VERIFIED — every class-(i) channel closed by attestation or structural
    impossibility; PARTIALLY-VERIFIED — no channel known open, at least one
    closure self-reported; UNVERIFIED — any class-(i) channel open or
@@ -128,8 +137,20 @@ container.
 
 ## Relation to prior art (acknowledged, by name)
 
-Disclosure sequencing: Dror LSU/LSU-E; registered reports; result-blind
-review; the ITCS 2023 staged reveal; Ballantyne & Celniker. Bias grading
+Disclosure sequencing: Dror LSU/LSU-E — the closest single ancestor, and
+closer than a bare citation suggests: LSU-E already requires experts to
+receive information in a controlled order, to DOCUMENT what they saw, and
+to RECORD how their opinion changed, with published worksheet
+implementations (2022). This protocol's delta over LSU-E is specifically
+the deterministic per-finding formation-time semantics (rule 4) and the
+committed envelope over LLM-session channels (rule 2), not the
+sequencing-and-documentation idea. Also: registered reports; result-blind
+review; the ITCS 2023 staged reveal; Ballantyne & Celniker. Claim-level
+graded provenance with quarantine routing in multi-agent systems: the
+Isnad-Rijal framework (arXiv 2607.24117) — it grades transmitter
+reliability; this protocol grades formation-time disclosure state; shared
+architectural pattern (claim-level grades), different measured object;
+acknowledged, not claimed. Bias grading
 of synthesized evidence: Cochrane RoB 2 (per result); GRADE (certainty
 per outcome). Prompt-hash commitment: Frontier Lag (arXiv 2605.04135).
 Repository-channel enumeration: Code-First Peer Review (arXiv
@@ -146,6 +167,17 @@ value. One partial instantiation has been operated (a two-arm
 framed-versus-clean reading, model held constant, hash-bound work
 identity); the full machinery has not run end to end; no anchoring
 infrastructure ships with this document.
+
+## Possible relations (not asserted)
+
+This surface emerged from one operating practice in parallel with other
+candidate surfaces: lineage-aware-agent-governance, lineage-admission-control, falsifiability-first-protocol, claim-strength-profile, scoped-rejection. Common origin is the only relation asserted.
+Composition, dependency, or a unified framework among any of them is
+possible and deliberately NOT asserted; no confirmed relation exists, and
+none should be inferred from co-ownership, shared vocabulary, or
+structural resemblance. Read under a weakest-compatible-relation default:
+navigation adjacency. If a composition is ever established it will be
+stated explicitly; absence of that statement means it has not been.
 
 ## Public / internal boundary
 
