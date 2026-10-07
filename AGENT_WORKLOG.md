@@ -17,3 +17,13 @@
 - Amendments passed an external amendment review (verdict PUSH with two
   required precision fixes, both applied) before this push. Historical
   entries above preserved byte-for-byte.
+
+## 2026-10-05 - Path hygiene and sensitive-data handling
+
+- Agent: OpenAI assistant. No independent review was performed.
+- Task: Add the owner-requested path-verification, handoff-scope, public-path hygiene, sensitive-data authorization, and pre-submission checks to existing agent instructions.
+- Files changed: AGENTS.md and AGENT_WORKLOG.md, by tail append only.
+- Verification: Inspected the complete proposed two-file diff; confirmed both original files remain exact byte prefixes and scanned the additions for concrete local paths, personal usernames, credentials, and sensitive values. The rules preserve existing authority boundaries and require an explicitly authorized, recorded narrow privacy correction before any append-only evidence redaction.
+- Tests/checks: Text-only verification; repository scripts, build checks, and test suites were not run.
+- Result: Governance additions only; no conceptual document or historical record content changed.
+- Unresolved questions and risks: Independent review remains unperformed. These instructions do not themselves add an automated enforcement gate or establish that old commits or other branches are free of sensitive content.
