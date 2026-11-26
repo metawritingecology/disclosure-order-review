@@ -27,3 +27,9 @@
 - Tests/checks: Text-only verification; repository scripts, build checks, and test suites were not run.
 - Result: Governance additions only; no conceptual document or historical record content changed.
 - Unresolved questions and risks: Independent review remains unperformed. These instructions do not themselves add an automated enforcement gate or establish that old commits or other branches are free of sensitive content.
+
+### 2026-11-26: Separate private review provenance from the shared worklog
+
+Agent: Gary (OpenAI). With the owner's authorization to align repository review disclosure rules, updated `AGENTS.md` and appended this worklog entry. Full private provenance remains in restricted records; the shared log records scope and limitations without private identifiers. This does not relax review requirements or revise any historical entry.
+
+Validation: reviewed the two-file documentation diff, confirmed the existing worklog is an exact byte prefix, and checked the new text for private identifiers. No code or workflow changed. Repository CI, where configured, is separate. No merge or deployment. Next eligible action: owner review.
