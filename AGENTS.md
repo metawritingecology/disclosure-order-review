@@ -32,3 +32,11 @@ The correction record must identify the affected file and historical entry or li
 This exception changes the current tracked content only. It does not authorize rewriting Git history, force-pushing, deleting branches, merging, or deploying, and it does not assert that older commits or external copies have been erased.
 
 Review lifecycle: review_after 2027-01-05; sunset_condition: superseded by an explicitly owner-approved path and sensitive-data policy that preserves these privacy and authorization boundaries. A review date alone does not expire protection or authorize removal.
+
+## Review provenance and disclosure
+
+For boundary-sensitive work or changes that received independent review, keep a traceable review record. Record the reviewer interface, model lineage, review mode, exact reviewed commit or immutable snapshot, and the evidence reference and verdict. Use `unknown` only when a value cannot be established.
+
+- **Private review:** Keep the complete record in owner-authorized, access-controlled storage outside Git. In `AGENT_WORKLOG.md` and other shared or public records, record only the fact, scope, and limitations of the review. Do not disclose private paths, executable commands, reviewer or routing identifiers, model and tool details, unpublished commit or snapshot identifiers, private receipt IDs, or links to restricted evidence. Do not substitute `unknown` for intentionally withheld details.
+- **Public review:** When the review, reviewed revision, and evidence are already public and safe to reference, the shared worklog may record public provenance and link to the public evidence. While any necessary part remains private, use the private-review rule.
+- This is a disclosure rule, not an instruction to weaken any review or evidence requirement, promote a review to a later revision, or rewrite prior log entries. Check the complete diff for disclosures before pushing.
